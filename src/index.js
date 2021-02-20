@@ -43,6 +43,7 @@ class CountdownTimer {
       secs: this.root.querySelector("[data-value='secs']"),
     };
     this.intervalId = null;
+    this.start();
   }
 
   updateTime(differenceInTime) {
@@ -85,14 +86,10 @@ class CountdownTimer {
 
 const timer = new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date('Feb 17, 2021'),
+  targetDate: new Date('Feb 21, 2021'),
 });
-
-timer.start();
 
 const timer2 = new CountdownTimer({
   selector: '#timer-2',
   targetDate: new Date('Mar 17, 2021'),
 });
-
-timer2.start();
